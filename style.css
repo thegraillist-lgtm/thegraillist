@@ -669,12 +669,14 @@ margin:10px 0;
 
 /* --- ZÁKLADNÝ ŠTÝL NADPISU (SVETLÝ REŽIM) --- */
 .gold-text {
+    /* PRESNÉ PÔVODNÉ PARAMETRE */
     font-family: 'Playfair Display', serif !important;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 38px;
-    text-align: center;
-    position: relative;
+    font-size: 38px !important;
+    font-weight: 700 !important;
+    font-style: italic !important;
+    line-height: 1.1 !important;
+    margin-bottom: 15px !important;
+    letter-spacing: -1px !important;
     
     /* Tu nastavíme farbu pre svetlý režim - napr. tvoja tmavomodrá/bridlicová */
     color: #425A6C !important;
@@ -953,3 +955,13 @@ body.dark .contact-item a {
     color: inherit !important;
 }
 
+@media (max-width: 480px) {
+    .gold-text {
+        font-size: 31px !important;
+        line-height: 1.25 !important;   /* kľúčové – stlačí riadky */
+        letter-spacing: -0.5px !important;
+        margin-bottom: 0px !important;
+
+        transform: translateY(-4px);   /* jemný posun hore */
+    }
+}
