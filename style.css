@@ -558,8 +558,8 @@ margin:10px 0;
 
 @media (max-width: 480px) {
     header {
-        padding: 40px 10px 20px !important; /* Viac miesta hore a dole */
-        gap: 10px !important;         /* Rozostupy medzi logom, tlačidlami a ikonami */
+        padding: 50px 10px 10px !important; /* Viac miesta hore a dole */
+        gap: 3px !important;         /* Rozostupy medzi logom, tlačidlami a ikonami */
         display: flex !important;
         flex-direction: column !important;
         align-items: center !important;
