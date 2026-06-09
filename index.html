@@ -37,25 +37,37 @@ function loadAnalytics() {
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "The Grail List",
-  "url": "https://thegraillist.com/",
-  "logo": "https://thegraillist.com/img/main-preview.jpg",
-  "sameAs": [
-    "https://www.facebook.com/profile.php?id=61583771206415",
-    "https://www.instagram.com/thegraillist",
-    "https://www.pinterest.com/thegraillist"
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://thegraillist.com/#organization",
+      "name": "The Grail List",
+      "url": "https://thegraillist.com/",
+      "logo": "https://thegraillist.com/img/main-preview.jpg",
+      "image": "https://thegraillist.com/img/main-preview.jpg",
+      "sameAs": [
+        "https://www.facebook.com/profile.php?id=61583771206415",
+        "https://www.instagram.com/thegraillist",
+        "https://www.pinterest.com/thegraillist"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://thegraillist.com/#website",
+      "url": "https://thegraillist.com/",
+      "name": "The Grail List",
+      "publisher": {
+        "@id": "https://thegraillist.com/#organization"
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://thegraillist.com/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
   ]
 }
-</script>
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "url": "https://thegraillist.com/",
-  "name": "The Grail List"
-}
 </script>
 
 <!-- 🟢 ITEMLIST: POKEMON CARDS -->
@@ -64,20 +76,24 @@ function loadAnalytics() {
   "@context": "https://schema.org",
   "@type": "ItemList",
   "name": "Pokemon Cards",
+  "itemListOrder": "https://schema.org/ItemListOrderDescending",
+  "numberOfItems": 10,
   "itemListElement": [
-    {"@type":"ListItem","position":1,"name":"Pikachu Illustrator (PSA 10)","url":"https://www.google.com/search?tbm=isch&q=Pikachu+Illustrator+PSA+10+Goldin+2026+record+sale"},
-    {"@type":"ListItem","position":2,"name":"Charizard 1st Edition (PSA 10)","url":"https://www.google.com/search?tbm=isch&q=Charizard+1st+Edition+PSA+10+Shadowless+Base+Set+Holo"},
-    {"@type":"ListItem","position":3,"name":"Trophy Pikachu No. 1","url":"https://www.google.com/search?tbm=isch&q=Trophy+Pikachu+No.+1+Trainer+1997+PSA+10+Gold+Promo"},
-    {"@type":"ListItem","position":4,"name":"Blastoise Prototype","url":"https://www.google.com/search?tbm=isch&q=Blastoise+Commissioned+Presentation+Galaxy+Star+Holo+Prototype"},
-    {"@type":"ListItem","position":5,"name":"Ishihara GX Signed","url":"https://www.google.com/search?tbm=isch&q=Ishihara+GX+Signed+Autograph+Pokemon+Card+PSA+10"},
-    {"@type":"ListItem","position":6,"name":"Umbreon Gold Star","url":"https://www.google.com/search?tbm=isch&q=Umbreon+Gold+Star+PSA+10+Holon+Phantoms+Japanese+Promo"},
-    {"@type":"ListItem","position":7,"name":"Kangaskhan Trophy","url":"https://www.google.com/search?tbm=isch&q=Kangaskhan+Family+Event+Trophy+Card+1998+PSA+10+ParentChild"},
-    {"@type":"ListItem","position":8,"name":"Lugia 1st Edition","url":"https://www.google.com/search?tbm=isch&q=Lugia+1st+Edition+Neo+Genesis+PSA+10+Gem+Mint"},
-    {"@type":"ListItem","position":9,"name":"Rayquaza Gold Star","url":"https://www.google.com/search?tbm=isch&q=Rayquaza+Gold+Star+PSA+10+Ex+Deoxys+Holo"},
-    {"@type":"ListItem","position":10,"name":"Trophy Pikachu No. 3","url":"https://www.google.com/search?tbm=isch&q=Trophy+Pikachu+No.+3+Trainer+1997+Bronze+Promo"}
+    {"@type":"ListItem","position":1,"name":"Pikachu Illustrator (PSA 10)","url":"https://thegraillist.com/pikachu-illustrator-psa10.html"},
+    {"@type":"ListItem","position":2,"name":"Charizard 1st Edition (PSA 10)","url":"https://thegraillist.com/#charizard-1st-edition"},
+    {"@type":"ListItem","position":3,"name":"Trophy Pikachu No. 1","url":"https://thegraillist.com/#trophy-pikachu-no1"},
+    {"@type":"ListItem","position":4,"name":"Blastoise Prototype","url":"https://thegraillist.com/#blastoise-prototype"},
+    {"@type":"ListItem","position":5,"name":"Ishihara GX Signed","url":"https://thegraillist.com/#ishihara-gx-signed"},
+    {"@type":"ListItem","position":6,"name":"Umbreon Gold Star","url":"https://thegraillist.com/#umbreon-gold-star"},
+    {"@type":"ListItem","position":7,"name":"Kangaskhan Trophy","url":"https://thegraillist.com/#kangaskhan-trophy"},
+    {"@type":"ListItem","position":8,"name":"Lugia 1st Edition","url":"https://thegraillist.com/#lugia-1st-edition"},
+    {"@type":"ListItem","position":9,"name":"Rayquaza Gold Star","url":"https://thegraillist.com/#rayquaza-gold-star"},
+    {"@type":"ListItem","position":10,"name":"Trophy Pikachu No. 3","url":"https://thegraillist.com/#trophy-pikachu-no3"}
   ]
 }
 </script>
+
+
 
 <!-- 📚 COMICS -->
 <script type="application/ld+json">
@@ -85,17 +101,19 @@ function loadAnalytics() {
   "@context":"https://schema.org",
   "@type":"ItemList",
   "name":"Comics",
+  "itemListOrder":"https://schema.org/ItemListOrderDescending",
+  "numberOfItems":10,
   "itemListElement":[
     {"@type":"ListItem","position":1,"name":"Action Comics #1 (CGC 9.0)","url":"https://thegraillist.com/action-comics-1.html"},
-    {"@type":"ListItem","position":2,"name":"Superman #1 (CGC 9.0)","url":"https://www.google.com/search?tbm=isch&q=Superman+1+1939+CGC+9.0"},
-    {"@type":"ListItem","position":3,"name":"Detective Comics #27 (High Grade)","url":"https://www.google.com/search?tbm=isch&q=Detective+Comics+27+CGC+8.0"},
-    {"@type":"ListItem","position":4,"name":"Action Comics #1 (CGC 8.5)","url":"https://www.google.com/search?tbm=isch&q=Action+Comics+1+CGC+8.5"},
-    {"@type":"ListItem","position":5,"name":"Superman #1 (CGC 8.0)","url":"https://www.google.com/search?tbm=isch&q=Superman+1+1939+CGC+8.0"},
-    {"@type":"ListItem","position":6,"name":"Amazing Fantasy #15 (CGC 9.6)","url":"https://www.google.com/search?tbm=isch&q=Amazing+Fantasy+15+CGC+9.6+Spider-Man+1st+appearance"},
-    {"@type":"ListItem","position":7,"name":"Batman #1 (Near Mint+)","url":"https://www.google.com/search?tbm=isch&q=Batman+1+CGC+9.8"},
-    {"@type":"ListItem","position":8,"name":"Detective Comics #27 (CGC 6.5)","url":"https://www.google.com/search?tbm=isch&q=Detective+Comics+27+CGC+6.5"},
-    {"@type":"ListItem","position":9,"name":"Captain America Comics #1 (CGC 9.4)","url":"https://www.google.com/search?tbm=isch&q=Captain+America+Comics+1+1941+CGC+9.4+1st+Cap+Bucky"},
-    {"@type":"ListItem","position":10,"name":"Marvel Comics #1 (CGC 9.2)","url":"https://www.google.com/search?tbm=isch&q=Marvel+Comics+1+1939+CGC+9.2+Human+Torch"}
+    {"@type":"ListItem","position":2,"name":"Superman #1 (CGC 9.0)","url":"https://thegraillist.com/#superman-1-cgc90"},
+    {"@type":"ListItem","position":3,"name":"Detective Comics #27","url":"https://thegraillist.com/#detective-comics-27"},
+    {"@type":"ListItem","position":4,"name":"Action Comics #1 (CGC 8.5)","url":"https://thegraillist.com/#action-comics-1-cgc85"},
+    {"@type":"ListItem","position":5,"name":"Superman #1 (CGC 8.0)","url":"https://thegraillist.com/#superman-1-cgc80"},
+    {"@type":"ListItem","position":6,"name":"Amazing Fantasy #15","url":"https://thegraillist.com/#amazing-fantasy-15"},
+    {"@type":"ListItem","position":7,"name":"Batman #1","url":"https://thegraillist.com/#batman-1"},
+    {"@type":"ListItem","position":8,"name":"Detective Comics #27 (CGC 6.5)","url":"https://thegraillist.com/#detective-comics-27-cgc65"},
+    {"@type":"ListItem","position":9,"name":"Captain America Comics #1","url":"https://thegraillist.com/#captain-america-comics-1"},
+    {"@type":"ListItem","position":10,"name":"Marvel Comics #1","url":"https://thegraillist.com/#marvel-comics-1"}
   ]
 }
 </script>
@@ -106,20 +124,111 @@ function loadAnalytics() {
   "@context":"https://schema.org",
   "@type":"ItemList",
   "name":"Retro Video Games",
+  "itemListOrder":"https://schema.org/ItemListOrderDescending",
+  "numberOfItems":10,
   "itemListElement":[
-    {"@type":"ListItem","position":1,"name":"Super Mario Bros NES","url":"https://www.google.com/search?tbm=isch&q=Super+Mario+Bros+NES+sealed"},
-    {"@type":"ListItem","position":2,"name":"Super Mario 64","url":"https://www.google.com/search?tbm=isch&q=Super+Mario+64+Wata+9.8"},
-    {"@type":"ListItem","position":3,"name":"The Legend of Zelda","url":"https://www.google.com/search?tbm=isch&q=Legend+of+Zelda+NES+sealed"},
-    {"@type":"ListItem","position":4,"name":"Pokémon Blue","url":"https://www.google.com/search?tbm=isch&q=Pokemon+Blue+Game+Boy+sealed"},
-    {"@type":"ListItem","position":5,"name":"Sonic the Hedgehog","url":"https://www.google.com/search?tbm=isch&q=Sonic+Genesis+sealed"},
-    {"@type":"ListItem","position":6,"name":"Mike Tyson Punch-Out","url":"https://www.google.com/search?tbm=isch&q=Mike+Tyson+Punch+Out+NES"},
-    {"@type":"ListItem","position":7,"name":"Nintendo World Championships","url":"https://www.google.com/search?tbm=isch&q=Nintendo+World+Championships+cartridge"},
-    {"@type":"ListItem","position":8,"name":"Resident Evil PS1","url":"https://www.google.com/search?tbm=isch&q=Resident+Evil+PS1+sealed"},
-    {"@type":"ListItem","position":9,"name":"Super Mario Bros 3","url":"https://www.google.com/search?tbm=isch&q=Super+Mario+Bros+3+NES+sealed"},
-    {"@type":"ListItem","position":10,"name":"Zelda Rev-A","url":"https://www.google.com/search?tbm=isch&q=Zelda+NES+Rev+A"}
+    {"@type":"ListItem","position":1,"name":"Super Mario Bros NES","url":"https://thegraillist.com/#super-mario-bros-nes"},
+    {"@type":"ListItem","position":2,"name":"Super Mario 64","url":"https://thegraillist.com/#super-mario-64"},
+    {"@type":"ListItem","position":3,"name":"The Legend of Zelda","url":"https://thegraillist.com/#the-legend-of-zelda"},
+    {"@type":"ListItem","position":4,"name":"Pokémon Blue","url":"https://thegraillist.com/#pokemon-blue"},
+    {"@type":"ListItem","position":5,"name":"Sonic the Hedgehog","url":"https://thegraillist.com/#sonic-the-hedgehog"},
+    {"@type":"ListItem","position":6,"name":"Mike Tyson Punch-Out","url":"https://thegraillist.com/#mike-tyson-punch-out"},
+    {"@type":"ListItem","position":7,"name":"Nintendo World Championships","url":"https://thegraillist.com/#nintendo-world-championships"},
+    {"@type":"ListItem","position":8,"name":"Resident Evil PS1","url":"https://thegraillist.com/#resident-evil-ps1"},
+    {"@type":"ListItem","position":9,"name":"Super Mario Bros 3","url":"https://thegraillist.com/#super-mario-bros-3"},
+    {"@type":"ListItem","position":10,"name":"Zelda Rev-A","url":"https://thegraillist.com/#zelda-rev-a"}
   ]
 }
 </script>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"ItemList",
+  "name":"Figures & Toys",
+  "itemListOrder":"https://schema.org/ItemListOrderDescending",
+  "numberOfItems":10,
+  "itemListElement":[
+    {"@type":"ListItem","position":1,"name":"LEGO Solid 14k Gold C-3PO","url":"https://thegraillist.com/#lego-solid-14k-gold-c-3po"},
+    {"@type":"ListItem","position":2,"name":"Boba Fett Rocket Prototype","url":"https://thegraillist.com/boba-fett-rocket-prototype.html"},
+    {"@type":"ListItem","position":3,"name":"Stan Lee Funko Pop Platinum","url":"https://thegraillist.com/#stan-lee-funko-pop-platinum"},
+    {"@type":"ListItem","position":4,"name":"Willy Wonka Golden Ticket Funko Pop","url":"https://thegraillist.com/#willy-wonka-golden-ticket-funko-pop"},
+    {"@type":"ListItem","position":5,"name":"LEGO Solid Silver Boba Fett","url":"https://thegraillist.com/#lego-solid-silver-boba-fett"},
+    {"@type":"ListItem","position":6,"name":"Jawa Vinyl Cape","url":"https://thegraillist.com/#jawa-vinyl-cape"},
+    {"@type":"ListItem","position":7,"name":"Alex DeLarge Funko Pop GITD","url":"https://thegraillist.com/#alex-delarge-funko-pop-gitd"},
+    {"@type":"ListItem","position":8,"name":"GI Joe Snake Eyes Series 1","url":"https://thegraillist.com/#gi-joe-snake-eyes-series-1"},
+    {"@type":"ListItem","position":9,"name":"Barbie #1 1959","url":"https://thegraillist.com/#barbie-1-1959"},
+    {"@type":"ListItem","position":10,"name":"Freddy Funko Jaime Lannister","url":"https://thegraillist.com/#freddy-funko-jaime-lannister"}
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"ItemList",
+  "name":"Hot Wheels",
+  "itemListOrder":"https://schema.org/ItemListOrderDescending",
+  "numberOfItems":10,
+  "itemListElement":[
+    {"@type":"ListItem","position":1,"name":"1969 Pink Beach Bomb","url":"https://thegraillist.com/volkswagen-beach-bomb.html"},
+    {"@type":"ListItem","position":2,"name":"1968 Overchrome Mustang","url":"https://thegraillist.com/#1968-overchrome-mustang"},
+    {"@type":"ListItem","position":3,"name":"1968 Overchrome Camaro","url":"https://thegraillist.com/#1968-overchrome-camaro"},
+    {"@type":"Wikipedia","type":"ListItem","position":4,"name":"1969 Mad Maverick","url":"https://thegraillist.com/#1969-mad-maverick"},
+    {"@type":"ListItem","position":5,"name":"1969 Brown Custom Charger","url":"https://thegraillist.com/#1969-brown-custom-charger"},
+    {"@type":"ListItem","position":6,"name":"1969 Ed Shaver Camaro","url":"https://thegraillist.com/#1969-ed-shaver-camaro"},
+    {"@type":"ListItem","position":7,"name":"1968 Cheetah Base","url":"https://thegraillist.com/#1968-cheetah-base"},
+    {"@type":"ListItem","position":8,"name":"1970 Red Baron","url":"https://thegraillist.com/#1970-red-baron"},
+    {"@type":"ListItem","position":9,"name":"1968 Custom VW","url":"https://thegraillist.com/#1968-custom-vw"},
+    {"@type":"ListItem","position":10,"name":"1970 Purple Olds 442","url":"https://thegraillist.com/#1970-purple-olds-442"}
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"ItemList",
+  "name":"Sneakers",
+  "itemListOrder":"https://schema.org/ItemListOrderDescending",
+  "numberOfItems":10,
+  "itemListElement":[
+    {"@type":"ListItem","position":1,"name":"Nike Air Yeezy 1 Grammy Prototype","url":"https://thegraillist.com/#nike-air-yeezy-1-grammy-prototype"},
+    {"@type":"ListItem","position":2,"name":"Air Jordan 1 1985 Game Worn","url":"https://thegraillist.com/#air-jordan-1-1985-game-worn"},
+    {"@type":"ListItem","position":3,"name":"Nike Moon Shoe 1972","url":"https://thegraillist.com/#nike-moon-shoe-1972"},
+    {"@type":"ListItem","position":4,"name":"Nike Mag 2016 Back to the Future","url":"https://thegraillist.com/#nike-mag-2016-back-to-the-future"},
+    {"@type":"ListItem","position":5,"name":"Buscemi 100 MM Diamond Sneakers","url":"https://thegraillist.com/#buscemi-100-mm-diamond-sneakers"},
+    {"@type":"ListItem","position":6,"name":"Air Jordan 12 Flu Game","url":"https://thegraillist.com/#air-jordan-12-flu-game"},
+    {"@type":"ListItem","position":7,"name":"Air Jordan 11 Silver Anniversary","url":"https://thegraillist.com/#air-jordan-11-silver-anniversary"},
+    {"@type":"ListItem","position":8,"name":"Eminem x Carhartt x Jordan 4","url":"https://thegraillist.com/#eminem-x-carhartt-x-jordan-4"},
+    {"@type":"ListItem","position":9,"name":"Air Jordan 1 Chicago 1985 DS","url":"https://thegraillist.com/#air-jordan-1-chicago-1985-ds"},
+    {"@type":"ListItem","position":10,"name":"Nike Dunk SB Low Paris","url":"https://thegraillist.com/#nike-dunk-sb-low-paris"}
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"ItemList",
+  "name":"Coins",
+  "itemListOrder":"https://schema.org/ItemListOrderDescending",
+  "numberOfItems":10,
+  "itemListElement":[
+    {"@type":"ListItem","position":1,"name":"1933 Saint-Gaudens Double Eagle","url":"https://thegraillist.com/1933-double-eagle.html"},
+    {"@type":"ListItem","position":2,"name":"1794 Flowing Hair Silver Dollar","url":"https://thegraillist.com/#1794-flowing-hair-silver-dollar"},
+    {"@type":"ListItem","position":3,"name":"1787 Brasher Doubloon","url":"https://thegraillist.com/#1787-brasher-doubloon"},
+    {"@type":"ListItem","position":4,"name":"1804 Silver Dollar","url":"https://thegraillist.com/#1804-silver-dollar"},
+    {"@type":"ListItem","position":5,"name":"Edward III Florin 1344","url":"https://thegraillist.com/#edward-iii-florin-1344"},
+    {"@type":"ListItem","position":6,"name":"Umayyad Gold Dinar 723","url":"https://thegraillist.com/#umayyad-gold-dinar-723"},
+    {"@type":"ListItem","position":7,"name":"1913 Liberty Head Nickel","url":"https://thegraillist.com/#1913-liberty-head-nickel"},
+    {"@type":"ListItem","position":8,"name":"1894-S Barber Dime","url":"https://thegraillist.com/#1894-s-barber-dime"},
+    {"@type":"ListItem","position":9,"name":"1943 Copper Lincoln Penny","url":"https://thegraillist.com/#1943-copper-lincoln-penny"},
+    {"@type":"ListItem","position":10,"name":"1870-S Liberty Seated Dollar","url":"https://thegraillist.com/#1870-s-liberty-seated-dollar"}
+  ]
+}
+</script>
+
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -476,7 +585,7 @@ function toggleMenu() {
     <div class="card pokemon">
         <h2><span data-en>Pokemon Cards</span><span data-sk>Pokémon karty</span><span data-de>Pokémon Karten</span></h2>
        <table>
-     <tr><td><a href="pikachu-illustrator-psa10.html">Pikachu Illustrator (PSA 10)🏆📄</a></td><td>$16.49M / €15.2M</td></tr>
+    <tr><td><a href="pikachu-illustrator-psa10.html">Pikachu Illustrator (PSA 10)🏆📄</a></td><td>$16.49M / €15.2M</td></tr>
     <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Charizard+1st+Edition+PSA+10+Shadowless+Base+Set+Holo">Charizard 1st Edition (PSA 10)🏆</a></td><td>$954K / €880K</td></tr>
     <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Trophy+Pikachu+No.+1+Trainer+1997+PSA+10+Gold+Promo">Trophy Pikachu No. 1 (Promo)🏆</a></td><td>$450K / €415K</td></tr>
     <tr><td><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?tbm=isch&q=Blastoise+Commissioned+Presentation+Galaxy+Star+Holo+Prototype">Blastoise Prototype / Commissioned🏆</a></td><td>$360K / €330K</td></tr>
